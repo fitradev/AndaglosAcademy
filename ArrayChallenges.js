@@ -24,16 +24,15 @@ console.log('\n\n----Menggunakan Built Function Pada Array----');
 
 function dataHandling2(hasil){
 // for(i=0;i<input.length;i++){
-//   hasil.splice(hasil[i],0,"pria","tes");
-//   console.log(hasil);
+//   var v=hasil[i].splice(3,1,"pria","tes");
+//   console.log(v);
 // }
 
 for(let i=0;i<input.length;i++){
   let l=hasil[i][3];
   //console.log(l);
-
    let y=l.split('');
-   let k=l.split('').reverse().join('');
+   let k=l.split('/').reverse().join('-');
   let b=y[3]+l[4];
 
 
