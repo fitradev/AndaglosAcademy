@@ -1,4 +1,4 @@
-console.log('1------Logic Challenge - Mencari Mean------ \n');
+console.log('1-------Logic Challenge - Mencari Mean------ \n');
 function cariMean(arr) {
   // you can only write your code here!
   let sum=0;
