@@ -32,7 +32,12 @@ for(let i=0;i<input.length;i++){
   let l=hasil[i][3];
   //console.log(l);
    let y=l.split('');
+<<<<<<< HEAD
    let k=l.split('/').reverse().join('-');
+=======
+   //let k=l.split('').reverse().join('');
+  let k=l.split('/').reverse().join('-');
+>>>>>>> 8073700c227fed853ba2353aee49041703035be5
   let b=y[3]+l[4];
 
 
