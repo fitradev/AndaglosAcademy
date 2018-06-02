@@ -33,7 +33,8 @@ for(let i=0;i<input.length;i++){
   //console.log(l);
 
    let y=l.split('');
-   let k=l.split('').reverse().join('');
+   //let k=l.split('').reverse().join('');
+  let k=l.split('/').reverse().join('-');
   let b=y[3]+l[4];
 
 
