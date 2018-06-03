@@ -65,37 +65,21 @@ console.log('\n\n---Logic Challenge - Pasangan Angka Terbesar-------');
 function pasanganTerbesar(num) {
 // you can only write your code here!
 
- let o= num.toString().split('');
-//console.log(o);
- let y= num.toString().split('',2).join('');
- //console.log(y);
- let n=o.length;
-//console.log(n);
-
-
-
-    // Initialize max product pair
-    let a = o[0];
-    let b = o[1];
-  var  f=eval(a.valueOf());
-    var g=eval(b.valueOf());
-
-    // Traverse through every possible pair
-
-    for (let i=0; i<n; i++){
-      for (let j=i+1; j<n; j++){
-
-          if (o[i]+o[j] > f+g){
-            f = o[i], g= o[j]
-          }
-      //  k= Math.max(g);
-      //Math.max(g);
-      }
+let str = String(num);
+let a;
+let b = 0;
+  for (var i = 0; i < str.length; i++){
+    a = Number(str[i] + str[i+1]);
+    if (a > b){
+      b = a;
     }
-    //eval(s2.valueOf());
-      return Math.max(f+g);
+  }
+  return b;
+    }
 
-}
+      // return Math.max(f+g);
+
+//}
 // TEST CASES
 console.log(pasanganTerbesar(641573)); // 73
 console.log(pasanganTerbesar(12783456)); // 83
