@@ -1,6 +1,41 @@
 function getReport(studentGrades) {
   // only code here..
+  var newArr = [];
+  var result = [];
+
+  for (var i = 0; i < studentGrades.length; i++) {
+    if (newArr.includes(studentGrades[i].classCode) === false) {
+      newArr.push(studentGrades[i].classCode);
+    }
   }
+
+  for (var j = 0; j < newArr.length; j++) {
+    var objScore = {};
+    var passed = [];
+    var failed = [];
+    for (var k = 0; k < studentGrades.length; k++) {
+      if (newArr[j] === studentGrades[k].classCode && studentGrades[k].score < 70) {
+        failed.push(studentGrades[k].name);
+      } else {
+        if (newArr[j] === studentGrades[k].classCode && studentGrades[k].score >= 70) {
+          passed.push(studentGrades[k].name);
+        }
+      }
+    }
+
+    objScore.classCode = newArr[j];
+    objScore.passed = passed;
+    objScore.failed = failed;
+    result.push(objScore);
+    // result.push({
+    //   classCode: newArr[j],
+    //   passed: passed,
+    //   failed: failed
+    // });
+  }
+
+  return result;
+}
 
 var grades1 = [
   { name: 'John', score: 80, classCode: 'A' },
