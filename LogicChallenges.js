@@ -31,6 +31,28 @@ console.log(balikKata('I am a bookworm')); // mrowkoob a ma I
 console.log(balikKata('Coding is my hobby')); // ybboh ym si gnidoC
 console.log(balikKata('Super')); // repuS
 
+
+
+console.log('\n\n------------------------------');
+console.log('Logic Challenge - konversiMenit');
+function konversiMenit(menit) {
+  // you can only write your code here!
+  let m = Math.floor(menit/60);
+  let g = menit%60;
+          if (g<10){
+            return (m+':'+'0'+g);
+          }else{
+            return (m+':'+g);
+          }
+
+}
+// TEST CASES
+console.log(konversiMenit(63)); // 1:03
+console.log(konversiMenit(124)); // 2:04
+console.log(konversiMenit(53)); // 0:53
+console.log(konversiMenit(88)); // 1:28
+console.log(konversiMenit(120)); // 2:00
+
 console.log('\n\n------------------------------');
 console.log('Logic Challenge - X dan O');
 function xo(str) {
