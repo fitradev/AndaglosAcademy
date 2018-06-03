@@ -1,5 +1,26 @@
 function digitsGrouper(numbers) {
-  // only code here..
+  // only code here.
+  var n=numbers.length;
+  var g=[];
+  var h;
+
+  for(var i=0;i<=3;i++){
+    g.push([]);
+  }
+  for(var i=0; i< n; i++){
+    if(numbers[i].toString().length === 1){
+      g[0].push(numbers[i]);
+    } else if(numbers[i].toString().length === 2){
+      g[1].push(numbers[i]);
+    } else if(numbers[i].toString().length === 3){
+      g[2].push(numbers[i]);
+    } else if(numbers[i].toString().length === 4){
+      g[3].push(numbers[i]);
+    }
+  }
+
+  return g;
+
 }
 
 console.log(digitsGrouper([1, 12, 13, 0, 88, 123, 456])); // [ [ 1, 0 ], [ 12, 13, 88 ], [ 123, 456 ], [] ]
